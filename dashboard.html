@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Panel | Taller Norte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/dashboard.js"></script>
+</head>
+<body class="dashboard-page">
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand sidebar-brand" href="dashboard.html" aria-label="Taller Norte, inicio">
+        <span class="brand-mark" aria-hidden="true">TN</span>
+        <span>Taller<span>Norte</span></span>
+      </a>
+      <div class="sidebar-label">MENÚ PRINCIPAL</div>
+      <nav id="main-navigation" class="main-navigation" aria-label="Navegación principal"></nav>
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">?</span>
+          <strong>¿Necesitas ayuda?</strong>
+          <span>Estamos para apoyarte.</span>
+          <a href="mailto:soporte@tallernorte.demo">Contactar soporte <span aria-hidden="true">→</span></a>
+        </div>
+        <button id="logout-button" class="logout-button" type="button">
+          <span aria-hidden="true">↪</span> Cerrar sesión
+        </button>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="topbar">
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <div class="breadcrumb"><span>Espacio de trabajo</span><span aria-hidden="true">/</span><strong id="current-section">Resumen</strong></div>
+        <div class="topbar-user">
+          <div class="topbar-user-copy"><strong id="header-name">Usuario</strong><span id="header-role">Rol</span></div>
+          <span class="avatar" id="header-avatar" aria-hidden="true">U</span>
+        </div>
+      </header>
+      <main id="dashboard-content" class="dashboard-content" tabindex="-1"></main>
+      <footer class="app-footer">Taller Norte <span>·</span> Panel de demostración</footer>
+    </div>
+    <button id="sidebar-backdrop" class="sidebar-backdrop" type="button" aria-label="Cerrar menú"></button>
+  </div>
+</body>
+</html>
