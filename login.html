@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2d">
+  <title>Iniciar sesión | Taller Norte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/login.js"></script>
+</head>
+<body class="login-page">
+  <main class="login-layout">
+    <section class="login-visual" aria-label="Taller Norte">
+      <a class="brand brand-light" href="login.html" aria-label="Taller Norte, inicio">
+        <span class="brand-mark" aria-hidden="true">TN</span>
+        <span>Taller<span class="brand-light-accent">Norte</span></span>
+      </a>
+      <div class="visual-copy">
+        <span class="eyebrow eyebrow-light">GESTIÓN DE TALLER, MÁS SIMPLE</span>
+        <h1>Todo en orden.<br>Todo en marcha.</h1>
+        <p>Órdenes, clientes y equipo en un solo lugar. Dedícate a lo que mejor haces.</p>
+      </div>
+      <div class="visual-footer">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Tu taller, conectado</span>
+      </div>
+      <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+      <div class="visual-orbit orbit-two" aria-hidden="true"></div>
+    </section>
+
+    <section class="login-panel">
+      <div class="login-card">
+        <div class="mobile-brand brand">
+          <span class="brand-mark" aria-hidden="true">TN</span>
+          <span>Taller<span>Norte</span></span>
+        </div>
+        <span class="eyebrow">PORTAL DEL TALLER</span>
+        <h2>Qué gusto verte</h2>
+        <p class="muted login-intro">Ingresa tus datos para continuar a tu espacio de trabajo.</p>
+
+        <form id="login-form" class="login-form" novalidate>
+          <label for="username">Usuario</label>
+          <div class="input-wrap">
+            <span class="input-icon" aria-hidden="true">✉</span>
+            <input id="username" name="username" type="text" autocomplete="username" placeholder="Tu usuario" required>
+          </div>
+
+          <div class="label-row">
+            <label for="password">Contraseña</label>
+            <span class="password-hint">Acceso de demostración</span>
+          </div>
+          <div class="input-wrap">
+            <span class="input-icon lock-icon" aria-hidden="true">●</span>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Tu contraseña" required>
+            <button class="password-toggle" id="password-toggle" type="button" aria-label="Mostrar contraseña">Mostrar</button>
+          </div>
+
+          <p id="login-error" class="form-message" role="alert" aria-live="polite"></p>
+          <button class="button button-primary login-submit" type="submit">
+            <span>Iniciar sesión</span><span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <details class="demo-access">
+          <summary>Ver usuarios de prueba</summary>
+          <p>Usa cualquiera de estas cuentas. La contraseña para todas es <code>demo123</code>.</p>
+          <div class="demo-users">
+            <span><strong>Propietario</strong><code>propietario</code></span>
+            <span><strong>Administrador</strong><code>admin</code></span>
+            <span><strong>Mecánico</strong><code>mecanico</code></span>
+            <span><strong>Cliente</strong><code>cliente</code></span>
+            <span><strong>Proveedor</strong><code>proveedor</code></span>
+          </div>
+        </details>
+        <p class="login-legal">Versión de demostración · Los datos son simulados</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
