@@ -1,0 +1,52 @@
+openapi: 3.0.3
+info:
+  title: Taller Norte API
+  version: 1.0.0
+  description: Backend REST para el panel de gestión del taller.
+servers:
+  - url: http://localhost:5000/api
+paths:
+  /auth/login:
+    post:
+      summary: Iniciar sesión
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Usuario autenticado
+        '401':
+          description: Credenciales inválidas
+  /ordenes:
+    get:
+      summary: Listado de órdenes según el rol
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Lista de órdenes
+  /actividad:
+    get:
+      summary: Actividad reciente
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Lista de actividad
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
